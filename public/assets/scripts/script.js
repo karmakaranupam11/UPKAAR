@@ -1,0 +1,2 @@
+let poslat;
+let poslon;

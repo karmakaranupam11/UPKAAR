@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Limelight&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Allura&family=Bungee+Outline&family=Limelight&family=Lobster&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background: #E3E2DF;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 100px 20px;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 4em;
+    color: #29a329;
+}
+
+.nav-item {
+    font-weight: 900;
+    font-size: 1.3em;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: #EE4C7C;
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: #1c5e5e;
+}
+
+#cos {
+    color: #29a329;
+}
+
+section::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #dd849e, white);
+    clip-path: circle(35% at 0% 100%);
+}
+
+#qtext {
+    color: #1c5e5e;
+    font-family: 'Abril Fatface', cursive;
+}
+
+#ctxt1 {
+    color: #EE4C7C;
+    font-family: 'Allura', cursive;
+}
+
+#ctxt2 {
+    font-family: 'Allura', cursive;
+    color: rgb(80, 212, 80);
+}
+
+#ctxt3 {
+    font-family: 'Allura', cursive;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    margin: auto;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(45px);
+}
+
+.container .card .img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover .img {
+    transform: translateY(-100px);
+}
+
+.container .card .img img {
+    max-width: 80%;
+    margin: 0 0 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover .img img {
+    transform: translate(-20px, -40px) rotate(-9deg) scale(1.5);
+}
+
+.container .card .img h2 {
+    color: black;
+    font-weight: 800;
+}
+
+.container .card .content {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+}
+
+.container .card .content .size,
+.container .card .content .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 20px;
+}
+
+.container .card .content .size h3,
+.container .card .content .color h3 {
+    color: black;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 10px;
+}
+
+.container .card .content .link a {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    border: 0;
+    padding: 16px 30px;
+    background: black;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    text-decoration: none;
+}
+
+.text {
+    position: relative;
+    margin: auto;
+    display: flex;
+    background: #cbe9e9;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.text ul li {
+    color: #05386B;
+}
+
+.container .card .content .link a:hover {
+    background: #0ad8d8;
+    color: BLACK;
+}
