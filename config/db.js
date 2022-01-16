@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const DB_URI = process.env.DB_URI || 'mongodb://localhost/test2';
+const DB_URI = process.env.DB_URI;
 
 mongoose.connect( DB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
@@ -12,7 +12,7 @@ db.on('error', () => {
 });
 
 db.once('open', function() {
-    console.log("Connected successfully to the database");
+    console.log("Connected successfully to the database");``
 });
 
 module.exports = { db };

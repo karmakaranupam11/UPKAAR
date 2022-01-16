@@ -111,7 +111,11 @@ body {
   cursor: pointer;
   outline: none;
 }
-
+#showall{
+  color: white;
+  padding: 5px;
+  background: black;
+}
 #btnSubmit:hover {
   background: #0ad8d8;
   color: BLACK;

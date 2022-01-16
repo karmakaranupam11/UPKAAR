@@ -177,23 +177,14 @@ section::after {
     text-decoration: none;
 }
 
-.text {
-    position: relative;
+#footer{
     margin: auto;
-    display: flex;
-    background: #cbe9e9;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px);
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    background-color: #cbd7ca;
+    color: white;
 }
 
-.text ul li {
-    color: #05386B;
-}
 
 .container .card .content .link a:hover {
     background: #0ad8d8;
-    color: BLACK;
+    color: rgb(0, 0, 0);
 }
