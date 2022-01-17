@@ -58,6 +58,20 @@ body {
   color: #29a329;
 }
 
+.nav-item {
+  font-weight: 900;
+  font-size: 1.3em;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+  color: #EE4C7C;
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+  color: #1c5e5e;
+}
+
 .card {
   border-radius: 10px;
   position: relative;
@@ -81,19 +95,6 @@ body {
   flex-wrap: wrap;
 }
 
-.nav-item {
-  font-weight: 900;
-  font-size: 1.3em;
-}
-
-.navbar-light .navbar-nav .nav-item .nav-link:hover,
-.navbar-light .navbar-nav .nav-item.active .nav-link {
-  color: #ee4c7c;
-}
-
-.navbar-light .navbar-nav .nav-item.active .nav-link {
-  color: #1c5e5e;
-}
 
 #btnSubmit {
   position: relative;

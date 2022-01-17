@@ -12,7 +12,7 @@
 }
 
 body {
-    background: #E3E2DF;
+    background: linear-gradient(to bottom right, #eeedea, white);
 }
 
 section {
@@ -180,7 +180,9 @@ section::after {
 #footer{
     margin: auto;
     z-index: 10;
-    background-color: #cbd7ca;
+    align-items: center;
+    padding: 20px;
+    background-color: #dbe7da;
     color: white;
 }
 

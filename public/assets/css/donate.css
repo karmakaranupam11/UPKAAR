@@ -1,61 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Allura&family=Bungee+Outline&family=Limelight&family=Lobster&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   color: #1c5e5e;
   font-family: "Josefin Sans", sans-serif;
-}
-
-section {
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-  overflow: hidden;
-  padding: 20px 20px;
-}
-
-
-.ocean {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  margin: auto;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-section::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom right, white, #23dd96);
-  clip-path: circle(35% at 0% 100%);
-}
-
-.con {
-  position: relative;
-  width: 80%;
-  height: 50%;
-  margin: auto;
-  display: flex;
-  padding: 100px;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 5px;
-  background: #f2f5f51a;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(25px);
-  font-size: 1.2em;
-}
-
-body {
-  background: #fffffd;
 }
 
 .top {
@@ -79,14 +29,69 @@ body {
   color: #ee4c7c;
 }
 
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+  color: #1c5e5e;
+}
+
+body {
+  background: #fffffd;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 20px 20px;
+}
+
+section::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, white, #23dd96);
+  clip-path: circle(35% at 0% 100%);
+}
+
+
+.ocean {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  margin: auto;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.con {
+  position: relative;
+  width: 80%;
+  height: 50%;
+  margin: auto;
+  display: flex;
+  padding: 100px;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  background: #f2f5f51a;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(25px);
+  font-size: 1.2em;
+}
+
 #btnSubmit {
   position: relative;
   top: 10px;
   display: block;
   border: 0;
   padding: 16px 30px;
-  background: black;
   border-radius: 50px;
+  background: black;
   font-weight: 600;
   letter-spacing: 1px;
   color: white;
@@ -97,10 +102,6 @@ body {
 }
 
 #btnSubmit:hover {
-  background: #0ad8d8;
-  color: BLACK;
-}
-
-.navbar-light .navbar-nav .nav-item.active .nav-link {
-  color: #1c5e5e;
+  background: #0af10a;
+  color: black;
 }
