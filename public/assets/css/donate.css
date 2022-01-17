@@ -15,6 +15,7 @@ section {
   padding: 20px 20px;
 }
 
+
 .ocean {
   position: relative;
   z-index: 10;
@@ -47,18 +48,18 @@ section::after {
   justify-content: center;
   flex-direction: column;
   border-radius: 5px;
-  background: #1c5e5e1a;
+  background: #f2f5f51a;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(25px);
   font-size: 1.2em;
 }
 
 body {
-  background: #e3e2df;
+  background: #fffffd;
 }
 
 .top {
-  font-family: "Abril Fatface", cursive;
+  font-weight: 900;
   color: #701e37;
 }
 
@@ -85,7 +86,7 @@ body {
   border: 0;
   padding: 16px 30px;
   background: black;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   font-weight: 600;
   letter-spacing: 1px;
   color: white;
