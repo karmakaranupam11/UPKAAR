@@ -7,7 +7,9 @@
   color: #1c5e5e;
   font-family: "Josefin Sans", sans-serif;
 }
-
+body {
+  background: linear-gradient(to bottom right, #cececc, white);
+}
 section {
   display: flex;
   align-items: center;

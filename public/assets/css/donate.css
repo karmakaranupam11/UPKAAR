@@ -7,7 +7,9 @@
   color: #1c5e5e;
   font-family: "Josefin Sans", sans-serif;
 }
-
+body {
+  background: linear-gradient(to bottom right, #cececc, white);
+}
 .top {
   font-weight: 900;
   color: #701e37;
@@ -26,17 +28,12 @@
 
 .navbar-light .navbar-nav .nav-item .nav-link:hover,
 .navbar-light .navbar-nav .nav-item.active .nav-link {
-  color: #ee4c7c;
+  color: #EE4C7C;
 }
 
 .navbar-light .navbar-nav .nav-item.active .nav-link {
   color: #1c5e5e;
 }
-
-body {
-  background: #fffffd;
-}
-
 section {
   display: flex;
   align-items: center;
@@ -78,7 +75,7 @@ section::after {
   justify-content: center;
   flex-direction: column;
   border-radius: 5px;
-  background: #f2f5f51a;
+  background: #f1f5f51a;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(25px);
   font-size: 1.2em;
