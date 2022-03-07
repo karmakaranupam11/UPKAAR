@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Vaccine slots</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/vaccine.css">
+        <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script defer src="../assets/scripts/jquery-3.6.0.js"></script>
+    <script defer src="../assets/scripts/vaccine.js"></script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">
+            <h1>उपकाR</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-lg-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://www.cowin.gov.in/home">Register for
+                        Vaccination</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://www.who.int/southeastasia">Know more about
+                        covid</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+    <div class="findSlots">
+        <h1>Search vaccine availibility in your location</h1>
+        <input class="form-control me-2" id="text" type="text" placeholder="Enter your Pincode here">
+        <input type="date" id="date" value="2022-01-01">
+        <button class="btn btn-outline-success" id="get">Search</button>
+        <div id="slot"></div>
+    </div>
+    </div>
+    <div id="footer" style="bottom: 0px;">  
+		<div class="footer-dark">
+		  <footer>
+			  <div class="container">
+				  <div class="row">
+					  <div class="col-sm-6 col-md-3 item">
+						  <h3>Tips</h3>
+						  <ul>
+									<li>Clean your hands.
+										
+									</li>
+									<li>
+										Maintain safe distance.
+                                    </li>
+									<li>										
+										Get vaccinated
+									</li>
+						  </ul>
+					  </div>
+					  <div class="col-sm-6 col-md-3 item">
+						  <h3>About</h3>
+						  <ul>
+						   UPAKAAR is a student project.
+						   Made for learning purpose and for 
+						   a hackathon.
+						  </ul>
+					  </div>
+					  <div class="col-md-6 item text">
+						  <h3>UPAKAAR</h3>
+						  <ul>
+							<li>
+								Coronavirus disease (COVID-19) is an infectious disease caused
+								by a newly discovered coronavirus. Most people who fall sick
+								with COVID-19 will experience mild to moderate symptoms and
+								recover without special treatment.
+							</li>
+							
+							<li>Most common symptoms: fever, dry cough, tiredness</li>
+							<li>
+								if you have any of these simptoms please check up for covid
+								test.
+							</li>
+                            <li>  <a href="https://www.vecteezy.com/free-vector/injection">Injection Vectors by Vecteezy</a></li>
+						</ul>
+					  </div>
+					  <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+				  </div>
+			  </div>
+		  </footer>
+</body>
+
+</html>

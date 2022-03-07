@@ -6,12 +6,12 @@ function createCards(data) {
   return $(`
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Name : ${data.name}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Contact : ${data.usercontact}</h6><br>
-                <p class="card-text">No. of Beds : ${data.noOfBeds}</p>
-                <p class="card-text">PinCode : ${data.postalcode}</p>
-                <p class="card-text">${data.city}, ${data.state}</p>
-                <p class="card-text">Hospital Name : ${data.hospitalName}</p>
+                <h5 class="card-title"><span class="name">Posted by :</span> ${data.name}</h5>
+                <h6 class="card-subtitle mb-2 text-muted"><span class="contact">Contact : </span>${data.usercontact}</h6><br>
+                <p class="card-text"><span class="name">No. of Beds :</span> ${data.noOfBeds}</p>
+                <p class="card-text"><span class="name">PinCode : </span>${data.postalcode}</p>
+                <p class="card-text"><span class="name"> Location :</span>${data.city}, ${data.state}</p>
+                <p class="card-text"><span class="name">Hospital Name :</span> ${data.hospitalName}</p>
             </div>
         </div>
     `);

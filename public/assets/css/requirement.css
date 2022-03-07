@@ -4,11 +4,7 @@
 * {
   margin: 0;
   padding: 0;
-  color: #1c5e5e;
   font-family: "Josefin Sans", sans-serif;
-}
-body {
-  background: linear-gradient(to bottom right, #cececc, white);
 }
 section {
   display: flex;
@@ -46,7 +42,7 @@ section::after {
 }
 
 body {
-  background: #e3e2df;
+background-color: whitesmoke;
 }
 
 .top {
@@ -78,14 +74,13 @@ body {
   border-radius: 10px;
   position: relative;
   width: 300px;
-  height: 300px;
   margin: 20px 20px;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(15px);
 }
-
 .container {
   position: relative;
   z-index: 10;
@@ -124,11 +119,44 @@ body {
   color: BLACK;
 }
 
+.name, .contact , .noofbeds, .pincode , .address, .hospital{
+  font-weight: 600;
+  color: rgb(8, 13, 17);
+}
+.card-body{
+  color: rgb(31, 130, 223);
+  font-size: 1.1rem;
+}
+.card-body h5{
+  color: #4fce55;
+}
+
+.card :hover{
+  border: solid 2px;
+  border-color: #3b9af3;
+}
+.card-body :hover{
+  border: none;
+}
+
 .pincode-search {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#footer{
+  margin: auto;
+  z-index: 10;
+  align-items: center;
+  color: black;
+  padding: 20px;
+  background-color: #dbe7da;
+  color: black;
+}
+#footer a{
+  color: rgb(37, 117, 192);
 }
 
 .inner-div {
