@@ -73,7 +73,7 @@ body {
 .container .card {
     position: relative;
     width: 300px;
-    height: 400px;
+    height: 450px;
     margin: 20px 40px;
     padding: 5px;
     display: flex;
@@ -116,7 +116,8 @@ body {
 }
 
 .text h2{
-    font-weight: 500;
+    font-weight: 800;
+    margin : 5px;
 }
 
 .container .card:hover .img img {
@@ -155,6 +156,10 @@ body {
     letter-spacing: 1px;
     margin-right: 10px;
 }
+iframe{
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
 
 .container .card .content .link a {
     position: relative;
@@ -177,8 +182,6 @@ body {
     background-color: #dbe7da;
     color: white;
 }
-
-
 .container .card .content .link a:hover {
     border: solid 2px;
     border-color: #063131;
