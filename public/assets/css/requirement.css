@@ -131,6 +131,10 @@ background-color: whitesmoke;
   color: #4fce55;
 }
 
+.card h6{
+  color: grey;
+}
+
 .card :hover{
   border: solid 2px;
   border-color: #3b9af3;
@@ -145,6 +149,8 @@ background-color: whitesmoke;
   justify-content: center;
   align-items: center;
 }
+
+
 
 #footer{
   margin: auto;

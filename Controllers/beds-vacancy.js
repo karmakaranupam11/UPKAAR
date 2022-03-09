@@ -5,6 +5,7 @@ const {VacantBeds} = require("../Models/vacant-bed");
 const addBedVacancy = async (body) => {
     return await VacantBeds.create({
         name: body.username,
+        date: body.date,
         city: body.city,
         usercontact: body.contact,
         postalcode: body.postalcode,

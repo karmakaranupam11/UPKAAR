@@ -5,6 +5,11 @@ const vacantBedSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    date: {
+        type: String,
+        required: true
+
+    },
     usercontact: {
         type: Number,
         required: true
@@ -33,4 +38,4 @@ const vacantBedSchema = new mongoose.Schema({
 
 const VacantBeds = new mongoose.model("vacantBeds", vacantBedSchema);
 
-module.exports = {VacantBeds};
+module.exports = { VacantBeds };
