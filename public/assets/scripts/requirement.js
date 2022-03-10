@@ -3,7 +3,7 @@ let btnSubmit = $("#btnSubmit");
 let inpPincode = $("#inpPincode");
 
 function createCards(data) {
-  return $(`
+    return $(`
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title"><span class="name">Posted by :</span> ${data.name}<br><h6>Posted on : ${data.date}</h6></ </h5>
@@ -31,11 +31,11 @@ function showResults(position) {
         lon: position.coords.longitude
     }, (res) => {
         cardContainer.empty();
-        if(res.length === 0) {
+        if (res.length === 0) {
             cardContainer.append($(`<h3 class="text-center"> No resources found near you, try searching by PinCode</h3>`))
         }
-        datas.sort( compare );
-        for(data of res) {
+        datas.sort(compare);
+        for (data of res) {
             cardContainer.append(createCards(data));
         }
     })
@@ -43,30 +43,35 @@ function showResults(position) {
 
 $.get("/api/vacancy/", (datas) => {
     cardContainer.empty();
-    datas.sort( compare );
+    datas.sort(compare);
     for (data of datas) {
         cardContainer.append(createCards(data));
     }
 });
 
-function compare( a, b ) {
-    if ( a.date > b.date ){
-      return -1;
+function compare(a, b) {
+    if (a.date > b.date) {
+        return -1;
     }
-    if ( a.date < b.date ){
-      return 1;
+    if (a.date < b.date) {
+        return 1;
     }
     return 0;
-  }
+}
 
-getLocation(); 
+getLocation();
 
 btnSubmit.click(() => {
+    if(inpPincode.val() === ""){
+        cardContainer.empty();
+        cardContainer.append($(`<h3 class="text-center"> Invalid Pincode! please enter a valid Pincode</h3>`))
+        return;
+    }
     $.get(`/api/vacancy/${inpPincode.val()}`, (datas) => {
         cardContainer.empty();
         inpPincode.val("pincode");
-        datas.sort( compare );
-        for(data of datas) {
+        datas.sort(compare);
+        for (data of datas) {
             cardContainer.append(createCards(data));
         }
     })
