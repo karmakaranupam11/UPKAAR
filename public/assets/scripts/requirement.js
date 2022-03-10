@@ -34,6 +34,7 @@ function showResults(position) {
         if(res.length === 0) {
             cardContainer.append($(`<h3 class="text-center"> No resources found near you, try searching by PinCode</h3>`))
         }
+        datas.sort( compare );
         for(data of res) {
             cardContainer.append(createCards(data));
         }
@@ -42,17 +43,29 @@ function showResults(position) {
 
 $.get("/api/vacancy/", (datas) => {
     cardContainer.empty();
+    datas.sort( compare );
     for (data of datas) {
         cardContainer.append(createCards(data));
     }
 });
 
-getLocation();
+function compare( a, b ) {
+    if ( a.date > b.date ){
+      return -1;
+    }
+    if ( a.date < b.date ){
+      return 1;
+    }
+    return 0;
+  }
+
+getLocation(); 
 
 btnSubmit.click(() => {
     $.get(`/api/vacancy/${inpPincode.val()}`, (datas) => {
         cardContainer.empty();
         inpPincode.val("pincode");
+        datas.sort( compare );
         for(data of datas) {
             cardContainer.append(createCards(data));
         }
