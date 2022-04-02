@@ -17,6 +17,7 @@ function getUsername() {
         type: "GET",
         success: (data) => {
             console.log(data.user);
+            UserName.val(`${data.user}`);
             containeruser.html(`<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"data-toggle="dropdown" aria-expanded="false">${data.user}</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a id="logout" class="dropdown-item" href="#">Logout</a><a class="dropdown-item" href="/reset">Reset Password</a></div>`);
         },
         error: () => {
