@@ -1,7 +1,25 @@
 const get = document.getElementById('get');
 const text = document.getElementById('text');
 const slot = document.getElementById('slot');
+const logoutButton = $("#logout");
+const  containeruser = $("#containeruser");
 const date = document.getElementById('date');
+let user = $("#user");
+
+function getUsername() {
+     $.ajax({
+         url: "/api/getUser",
+         type: "GET",
+         success: (data) => {
+             console.log(data.user);
+             containeruser.html(`<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"data-toggle="dropdown" aria-expanded="false">${data.user}</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a id="logout" class="dropdown-item" href="#">Logout</a><a class="dropdown-item" href="/reset">Reset Password</a></div>`);
+         },
+         error: () => {
+             console.log("not logged in");
+             containeruser.html(`<a class="nav-link" target="_blank" href="/">Sign in</a>`);
+         }
+     });
+ }
 
 generateDate = () => {
      const dt = new Date();
@@ -14,6 +32,8 @@ generateDate = () => {
      return today;
 }
 
+getUsername();
+
 changeFormat = (date) => {
      const myArray = date.split("-");
 
@@ -21,15 +41,29 @@ changeFormat = (date) => {
      return dt;
 }
 
+$("body").on("click", "#logout", function () {
+     $.ajax({
+         url: "/api/logout",
+         type: "GET",
+         success: () => {
+             console.log("successfully logout");
+             window.location.href = "/";
+         },
+         error: () => {
+             console.log("Not logged out");
+         }
+     });
+ });
+
 checkValid = (date) => {
      var varDate = new Date(date); //dd-mm-YYYY
      var today = new Date();
      today.setHours(0, 0, 0, 0);
 
-     if (today >= varDate){
+     if (today >= varDate) {
           console.log("date" + varDate);
-     console.log("Today" + today);
-     return false;
+          console.log("Today" + today);
+          return false;
      }
      else return true;
 }
@@ -49,7 +83,7 @@ get.addEventListener('click', () => {
      console.log("date : " + date.value + " " + changeFormat(date.value))
      $.get(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${text.value}&date=${choosenDate}`, (datas) => {
           slot.innerHTML = "";
-          if(datas.sessions.length == 0){
+          if (datas.sessions.length == 0) {
                slot.innerHTML = "No slots available for booking!"
                return
           }

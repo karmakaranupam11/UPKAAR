@@ -129,6 +129,16 @@ body {
     font-weight: 800;
 }
 
+#logout{
+    color: red;
+    font-weight: bold;
+}
+
+#logout:hover {
+    background-color: red;
+    color: white;
+}
+
 .container .card .content {
     position: absolute;
     bottom: 20px;

@@ -46,6 +46,16 @@
     color: #86c486;
 }
 
+#logout{
+    color: red;
+    font-weight: bold;
+}
+
+#logout:hover {
+    background-color: red;
+    color: white;
+}
+
 .feetype {
     display: block;
     color: rgb(247, 245, 245);

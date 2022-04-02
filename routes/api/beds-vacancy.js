@@ -19,9 +19,9 @@ route.get("/:zipcode", validateZipcode, async (req, res) => {
         res.status(204).send(data);
 });
 
-route.post("/", validateZipcodePost, async (req, res) => {
-    let addedData = await addBedVacancy(req.body);
-    res.status(200).send(addedData);
-});
+// route.post("/", validateZipcodePost, async (req, res) => {
+//     let addedData = await addBedVacancy(req.body);
+//     res.status(200).send(addedData);
+// });
 
 module.exports = { route }

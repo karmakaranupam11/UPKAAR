@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-lg-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" target="_blank" href="https://www.cowin.gov.in/home">Register for
@@ -45,10 +45,21 @@
                     <a class="nav-link" target="_blank" href="https://www.who.int/southeastasia">Know more about
                         covid</a>
                 </li>
+                <li id="containeruser" class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+						data-toggle="dropdown" aria-expanded="false">
+						User
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Logout</a>
+						<a class="dropdown-item" href="#">Reset Password</a>
+					</div>
+				</li>
             </ul>
         </div>
-    </nav>
 
+    </nav>
+    <div id="status"></div>
     <!-- pincode-search -->
     <div class="container pincode-search">
 
@@ -58,12 +69,14 @@
             </label>
             <div class="control has-icons-left has-icons-right">
                 <input class="input is-success" type="number" id="inpPincode" placeholder="pincode">
-                <span class="icon is-small is-left">
+                <!-- <span class="icon is-small is-left">
+                    this 1
                     <i class="fas fa-user"></i>
                 </span>
                 <span class="icon is-small is-right">
+                    this 2
                     <i class="fas fa-check"></i>
-                </span>
+                </span> -->
             </div>
         </div>
 

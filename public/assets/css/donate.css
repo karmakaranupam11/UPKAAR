@@ -52,6 +52,15 @@ section::after {
   clip-path: circle(35% at 0% 100%);
 }
 
+#logout{
+  color: red;
+  font-weight: bold;
+}
+
+#logout:hover {
+  background-color: red;
+  color: white;
+}
 
 .ocean {
   position: relative;
@@ -81,6 +90,7 @@ section::after {
   backdrop-filter: blur(25px);
   font-size: 1.2em;
 }
+
 
 #btnSubmit {
   position: relative;

@@ -61,6 +61,8 @@ background-color: whitesmoke;
   font-size: 1.3em;
 }
 
+
+
 .navbar-light .navbar-nav .nav-item .nav-link:hover,
 .navbar-light .navbar-nav .nav-item.active .nav-link {
   color: #EE4C7C;
@@ -81,6 +83,8 @@ background-color: whitesmoke;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(15px);
 }
+
+
 .container {
   position: relative;
   z-index: 10;
@@ -119,10 +123,23 @@ background-color: whitesmoke;
   color: BLACK;
 }
 
+
+
 .name, .contact , .noofbeds, .pincode , .address, .hospital{
   font-weight: 600;
   color: rgb(8, 13, 17);
 }
+
+#logout{
+  color: red;
+  font-weight: bold;
+}
+
+#logout:hover {
+  background-color: red;
+  color: white;
+}
+
 .card-body{
   color: rgb(31, 130, 223);
   font-size: 1.1rem;
