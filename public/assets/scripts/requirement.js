@@ -100,7 +100,7 @@ $("body").on("click", "#logout", function () {
 });
 
 // for dynamically created elements
-$(document).on('click', postDeleteButton, function () {
+$("body").on('click', postDeleteButton, function () {
     console.log('Delete button clicked');
 
     const postid = document.getElementById('postDeleteButton').parentNode.id;
