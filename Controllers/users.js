@@ -119,34 +119,6 @@ exports.logout = async (req, res) => {
     }
 };
 
-// exports.forgotPassword = async (req, res) => {
-//     try {
-
-//         // find the user from email
-//         const user = await User.findOne({ email: req.body.email });
-
-//         if(!user){
-//             return res.status(404).json({
-//                 success : false,
-//                 msg : "No such email",
-//             })
-//         }
-
-//         const resetPasswordToken = user.getResetPasswordToken();
-
-//         // save the changes made by the above getResetPasswordToken function
-//         await user.save();
-
-//         const resetUrl = ``;
-
-
-//     } catch (error) {
-//         res.status(500).json({
-//             success: false,
-//             msg: error.message,
-//         })
-//     }
-// }
 
 exports.updatePassword = async (req, res) => {
     try {

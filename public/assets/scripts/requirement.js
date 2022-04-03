@@ -5,7 +5,6 @@ let user = $("#user");
 let status = $("#status");
 let logoutButton = $("#logout");
 let containeruser = $("#containeruser");
-let postDeleteButton = $("#postDeleteButton");
 
 
 function getUsername() {
@@ -100,7 +99,7 @@ $("body").on("click", "#logout", function () {
 });
 
 // for dynamically created elements
-$("body").on('click', postDeleteButton, function () {
+$("body").on("click", "#postDeleteButton" , function () {
     console.log('Delete button clicked');
 
     const postid = document.getElementById('postDeleteButton').parentNode.id;

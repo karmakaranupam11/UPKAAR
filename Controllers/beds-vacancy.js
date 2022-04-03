@@ -107,36 +107,6 @@ const findBedVacancyByPostalcode = async (zipcode) => {
     });
 }
 
-// const updateCaption = async (req,res) =>{
-//     try {
-//         const post = await Post.findById(req.params.id);
-
-//         if(!post) {
-//             return res.status(404).json({
-//              success : false,
-//              msg : "post not found!"
-//             });
-//         }
-         
-//         if( post.author.toString() !== req.user._id.toString() ){
-//            return res.status(401).json({
-//                 success : false,
-//                 msg : "You are unauthorized"
-//             })
-//         }
-        
-        
-
-//     }
-//     catch(error){
-//         res.status(500).json({
-//             success : false,
-//             msg : error.message
-//         })
-//     }         
-// }
-
-
 
 module.exports =  {
     addBedVacancy,
