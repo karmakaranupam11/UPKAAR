@@ -23,6 +23,12 @@ function getUsername() {
 }
 
 function createCards(data) {
+    let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+    let date = data.date.substring(0,10);
+    let arr = date.split('-');
+
+    data.date = arr[2] +" "+months[parseInt(arr[1])-1] +" "+arr[0];
+    // console.log(data.date);
     return $(`
         <div class="card" style="width: 18rem;">
             <div id="${data._id}" class="card-body">
@@ -101,6 +107,8 @@ $("body").on("click", "#logout", function () {
 // for dynamically created elements
 $("body").on("click", "#postDeleteButton" , function () {
     console.log('Delete button clicked');
+
+    if(!confirm("are you sure you want to delete!")) return;
 
     const postid = document.getElementById('postDeleteButton').parentNode.id;
     // console.log(id);

@@ -4,6 +4,7 @@ let password = $("#password");
 let submit = $("#btnSubmit");
 let message = $("#message");
 
+
 submit.click(() => {
 
     $.ajax({
