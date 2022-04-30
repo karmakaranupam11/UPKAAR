@@ -7,20 +7,42 @@ let logoutButton = $("#logout");
 let containeruser = $("#containeruser");
 
 
+
 function getUsername() {
-    $.ajax({
-        url: "/api/getUser",
-        type: "GET",
-        success: (data) => {
-            console.log(data.user);
-            containeruser.html(`<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"data-toggle="dropdown" aria-expanded="false">${data.user}</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a id="logout" class="dropdown-item" href="#">Logout</a><a class="dropdown-item" href="/reset">Reset Password</a></div>`);
-        },
-        error: () => {
-            console.log("not logged in");
-            containeruser.html(`<a class="nav-link" target="_blank" href="/">Sign in</a>`);
-        }
-    });
+  $.ajax({
+    url: "/api/getUser",
+    type: "GET",
+    success: (data) => {
+      console.log(data.user);
+      currentUser = data.userId;
+      console.log(currentUser);
+      containeruser.html(
+        `<a class="nav-link" role="button" data-toggle="dropdown" aria-expanded="false" ><img src="../assets/images/account_circle_black_24dp.svg" class="rounded-circle"
+        style="width: 30px;"  alt="Avatar" /></a><div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"><a class="dropdown-item"  data-target="#exampleModal" href="#">${data.user.substring(0,1).toUpperCase()+data.user.substring(1)}</a><a class="dropdown-item" data-toggle="modal" data-target="#exampleModal" href="#">Logout</a><a class="dropdown-item" href="/reset">Reset Password</a></div>`
+      );
+    },
+    error: () => {
+      console.log("not logged in");
+      containeruser.html(
+        `<a class="nav-link" target="_blank" href="/">Sign in</a>`
+      );
+    },
+  });
 }
+
+
+{/* <div class="card" style="width: 18rem;">
+<div id="${data._id}" class="card-body">
+    <h5 class="card-title"><span class="name">Posted by :</span> ${data.name}<br><h6>Posted on : ${data.date}</h6></ </h5>
+    <h6 class="card-subtitle mb-2 text-muted"><span class="contact">Contact : </span>${data.usercontact}</h6><br>
+    <p class="card-text"><span class="name">No. of Beds :</span> ${data.noOfBeds}</p>
+    <p class="card-text"><span class="name">PinCode : </span>${data.postalcode}</p>
+    <p class="card-text"><span class="name"> Location :</span>${data.city}, ${data.state}</p>
+    <p class="card-text"><span class="name">Hospital Name :</span> ${data.hospitalName}</p>
+    <button id="postDeleteButton" type="button" class="btn btn-outline-danger">Delete</button>
+</div>
+</div> */}
+ 
 
 function createCards(data) {
     let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
@@ -30,17 +52,41 @@ function createCards(data) {
     data.date = arr[2] +" "+months[parseInt(arr[1])-1] +" "+arr[0];
     // console.log(data.date);
     return $(`
-        <div class="card" style="width: 18rem;">
-            <div id="${data._id}" class="card-body">
-                <h5 class="card-title"><span class="name">Posted by :</span> ${data.name}<br><h6>Posted on : ${data.date}</h6></ </h5>
-                <h6 class="card-subtitle mb-2 text-muted"><span class="contact">Contact : </span>${data.usercontact}</h6><br>
-                <p class="card-text"><span class="name">No. of Beds :</span> ${data.noOfBeds}</p>
-                <p class="card-text"><span class="name">PinCode : </span>${data.postalcode}</p>
-                <p class="card-text"><span class="name"> Location :</span>${data.city}, ${data.state}</p>
-                <p class="card-text"><span class="name">Hospital Name :</span> ${data.hospitalName}</p>
-                <button id="postDeleteButton" type="button" class="btn btn-outline-danger">Delete</button>
-            </div>
-        </div>
+    <div class="card">
+	<div id="${data._id}" class="card-body">
+		<div class="card-body">
+			<h5 class="card-title">Organization : ${data.organizationname}</h5>
+			<h5 class="card-title"><span class="name">Posted by :</span> ${ data.name}<br>
+				<h6>Posted on : ${data.date}</h6>
+			</h5>
+			<p class="card-text">${data.hospitalName}</p>
+			<p class="card-text">${data.address}</p>
+		</div>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">
+				<h6 class="card-subtitle mb-2 text-muted"><span class="contact">Help line no. : </span>${
+					data.usercontact
+					}</h6>
+			</li>
+			<li class="list-group-item">
+				<p class="card-text"><span class="name">PinCode : </span>${
+					data.postalcode
+					}</p>
+			</li>
+			<li class="list-group-item">
+				<p class="card-text"><span class="name"> Address :</span>${
+					data.city
+					}, ${data.state}</p>
+			</li>
+			<li class="list-group-item">
+				<p class="card-text"><span class="name">Volume :</span> ${ data.noOfBeds
+					}</p>
+			</li>
+		</ul>
+		<button id="postDeleteButton" type="button" class="btn btn-outline-danger">Delete</button>
+	</div>
+</div>
+
     `);
 }
 

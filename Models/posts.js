@@ -9,6 +9,14 @@ const post = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     },
+    organizationname : {
+         type: String,
+         required : true
+    },
+    address : {
+        type : String,
+        required : true
+    },
     date: {
         type: Date,
         default: Date.now,
@@ -36,7 +44,8 @@ const post = new mongoose.Schema({
     hospitalName: {
         type: String,
         default: "Not Defined"
-    }
+    },
+
 });
 
 const Posts = new mongoose.model("posts", post);

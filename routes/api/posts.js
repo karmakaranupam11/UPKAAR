@@ -9,4 +9,5 @@ router.route("/post/upload").post(isAuthenticated, addBedVacancy);
 
 router.route("/removePost/:id").delete(isAuthenticated, removePost);
 
+
 module.exports = router;

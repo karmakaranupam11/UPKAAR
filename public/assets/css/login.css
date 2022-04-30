@@ -2,7 +2,11 @@
 *{
     margin: 0px;
     padding: 0px;
-	font-family: "Josefin Sans", sans-serif;
+	/* font-family: "Josefin Sans", sans-serif; */
+}
+
+#logincard{
+	border: solid 2px rgb(183, 183, 201);
 }
 
 body{
@@ -10,77 +14,14 @@ body{
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: rgb(233, 246, 225);
+	background: linear-gradient(to bottom right, #ededf0, rgb(244, 244, 248));
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	width: 100%;
 	margin: -20px 0 50px;
 }
 
-#logo{
-	color: rgb(123, 193, 236);
-	font-weight: bold;
-}
-
-div{
-  background-color: #FFFFFF;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	/* padding: 10px; */
-	height: 100%;
-	width: 100%;
-	text-align: center;
-}
-
-.container{
-  background-color: #fff;
-	border-radius: 10px;
-	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-		0 10px 10px rgba(0, 0, 0, 0.22);
-	position: relative;
-	overflow: hidden;
-	width: 300px;
-	max-width: 100%;
-	min-height: 300px;
-  max-height: 400px;
-}
-
-input{
-	background-color: #eee;
-	border: none;
-	padding: 12px 15px;
-	margin: 8px 0;
-}
-
-a{
-    color: rgb(119, 113, 113);
-    text-decoration: none;
-    margin: 5px;
-}
-a:hover{
-    color: rgb(44, 172, 44);
-}
 
 
-button {
-	border-radius: 50px;
-	border: 1px solid rgb(123, 210, 104);
-	background-color: rgb(123, 210, 104);
-	color: #0e0d0d;
-	font-size: 12px;
-	display: flex;
-	align-items: center;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 1px;
-	margin: 10px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
-}
 
-button:hover {
-	color: rgb(16, 16, 15);
-	background-color: rgb(145, 223, 122);
-}
+

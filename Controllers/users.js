@@ -43,7 +43,8 @@ exports.getUser = async (req, res) => {
 
         res.status(200).json({
             success: true,
-            user: user.name
+            user: user.name,
+            userId : user._id
         })
     }
     catch (error) {

@@ -5,11 +5,14 @@ const User  = require("../Models/users");
 
 
 const addBedVacancy = async (req, res) => {
-
+     
+    console.log(req.body);
     try {
     const newPost =  await Posts.create({
         name: req.body.username,
         author: req.user._id,
+        organizationname : req.body.organization,
+        address : req.body.address,
         city: req.body.city,
         usercontact: req.body.contact,
         postalcode: req.body.postalcode,
@@ -39,9 +42,16 @@ const addBedVacancy = async (req, res) => {
 }
 
 const removePost = async (req, res) =>{
+   
+    console.log("this is the post id before :",req.params.id);
+    console.log("current user id : ",req.user._id);
     try{
+
         const post = await Posts.findById(req.params.id);
         
+        console.log("the author id : ",post.author.toString());
+
+
         // check if the post is not found
         if(!post){
             return res.status(404).json({
@@ -84,6 +94,8 @@ const removePost = async (req, res) =>{
         })
     }
 }
+
+
 
 const findAllBedVacncy = async () => {
     return await Posts.find({}, (err, data) => {

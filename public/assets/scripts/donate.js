@@ -1,8 +1,10 @@
 let UserName = $("#UserName");
+let Organization = $("#Organization")
 let UserContact = $("#UserContact");
 let UserCity = $("#UserCity");
 let UserPostalCode = $("#UserPostalCode");
 let UserState = $("#UserState");
+let address = $("#inputaddress");
 let BedNumbers = $("#BedNumbers");
 let HospitalName = $("#HospitalName");
 let logoutButton = $("#logout");
@@ -18,7 +20,8 @@ function getUsername() {
         success: (data) => {
             console.log(data.user);
             UserName.val(`${data.user}`);
-            containeruser.html(`<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"data-toggle="dropdown" aria-expanded="false">${data.user}</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a id="logout" class="dropdown-item" href="#">Logout</a><a class="dropdown-item" href="/reset">Reset Password</a></div>`);
+            containeruser.html( `<a class="nav-link" role="button" data-toggle="dropdown" aria-expanded="false" ><img src="../assets/images/account_circle_black_24dp.svg" class="rounded-circle"
+            style="width: 30px;"  alt="Avatar" /></a><div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"><a class="dropdown-item"  data-target="#exampleModal" href="#">${data.user.substring(0,1).toUpperCase()+data.user.substring(1)}</a><a class="dropdown-item" data-toggle="modal" data-target="#exampleModal" href="#">Logout</a><a class="dropdown-item" href="/reset">Reset Password</a></div>`);
         },
         error: () => {
             console.log("not logged in");
@@ -53,7 +56,10 @@ generateTodaysDate = () => {
 getUsername();
 
 btnSubmit.click(() => {
+    console.log(UserName.val(),address.val(),Organization.val(),UserContact.val(),UserCity.val(),UserPostalCode.val(),UserState.val(),BedNumbers.val(),HospitalName.val());
     $.post("/api/post/upload", {
+        organization : Organization.val(),
+        address : address.val(),
         username: UserName.val(),
         date: generateTodaysDate(),
         city: UserCity.val(),
@@ -64,6 +70,8 @@ btnSubmit.click(() => {
         hospitalName: HospitalName.val()
     }, (err, data) => {
         UserName.val("");
+        address.val("");
+        Organization.val("");
         UserContact.val("");
         UserCity.val("");
         UserPostalCode.val("");

@@ -12,28 +12,32 @@
 }
 
 body {
-    background: linear-gradient(to bottom right, #f1f1ee, white);
+    background: linear-gradient(to bottom right, #f8f9fb, white);
 }
 
 .navbar-brand {
     font-weight: 800;
     font-size: 4em;
     color: #29a329;
-}
-
-.nav-item {
+  }
+  
+  .nav-item {
     font-weight: 900;
     font-size: 1.3em;
-}
+  }
+  
+  .navbar-light .navbar-nav .nav-item .nav-link{
+    color: #8a91a9;
+  }
 
-.navbar-light .navbar-nav .nav-item .nav-link:hover,
-.navbar-light .navbar-nav .nav-item.active .nav-link {
-    color: #EE4C7C;
-}
-
-.navbar-light .navbar-nav .nav-item.active .nav-link {
-    color: #1c5e5e;
-}
+  .navbar-light .navbar-nav .nav-item .nav-link:hover,
+  .navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: #4056A1;
+  }
+  
+  .navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: #4056A1;
+  }
 
 #cos {
     color: #29a329;
@@ -41,12 +45,12 @@ body {
 
 
 #qtext {
-    color: #1c5e5e;
+    color: #4056A1;
     font-family: 'Abril Fatface', cursive;
 }
 
 #ctxt1 {
-    color: #EE4C7C;
+    color: #ea88a5;
     font-family: 'Allura', cursive;
 }
 
@@ -81,6 +85,7 @@ body {
     text-align: center;
     align-items: center;
     flex-direction: column;
+    transition: transform .2s;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
@@ -98,6 +103,7 @@ body {
 }
 
 .container .card:hover {
+    transform: scale(1.1);
        border: solid 2px;
        border-color: #EE4C7C;
 }
@@ -129,7 +135,7 @@ body {
     font-weight: 800;
 }
 
-#logout{
+/* #logout{
     color: red;
     font-weight: bold;
 }
@@ -137,7 +143,7 @@ body {
 #logout:hover {
     background-color: red;
     color: white;
-}
+} */
 
 .container .card .content {
     position: absolute;
@@ -177,7 +183,7 @@ iframe{
     display: inline-block;
     border: 0;
     padding: 16px 30px;
-    background: black;
+    background: #90a7f2;
     border-radius: 50px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -189,12 +195,11 @@ iframe{
     z-index: 10;
     align-items: center;
     padding: 20px;
-    background-color: #dbe7da;
+    background-color: #e1e4f3;
     color: white;
 }
 .container .card .content .link a:hover {
     border: solid 2px;
-    border-color: #063131;
-    background: #0ad8d8;
-    color: rgb(0, 0, 0);
+    color: #e6e9f0;
+    background: #4056A1;
 }

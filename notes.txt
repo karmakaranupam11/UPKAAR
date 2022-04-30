@@ -1,3 +1,0 @@
-we are using node mailer for sending mail to the user
-
-we are using crypto for hashing and generating a token
