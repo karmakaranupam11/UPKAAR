@@ -26,5 +26,8 @@
   "devDependencies": {
     "autoprefixer": "^10.4.5",
     "tailwindcss": "^3.0.24"
-  }
+  },
+  "engines": {
+    "node": ">=14.20.1"
+  }  
 }
