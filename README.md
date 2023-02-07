@@ -1,6 +1,6 @@
 # UPKAAR
 
-## Link : https://upakaar.herokuapp.com/ 🚀
+## Link : https://upkaar.onrender.com/ 🚀
 
 ### What is Upkaar 🤔
 
